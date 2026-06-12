@@ -33,11 +33,11 @@ pip install -e agent-harness/ 2>/dev/null && echo "本地安装成功" || pip in
 `arguments` 参数就是传给 CLI 的命令行参数。将其直接拼接到 `python -m cli_anything.netty_server` 后面执行：
 
 ```bash
-# 示例：查询在线设备
-python -m cli_anything.netty_server --host 148.70.196.152 devices list --json
+# 示例：查询在线设备（替换为你的服务器 IP）
+python -m cli_anything.netty_server --host <server-ip> devices list --json
 
 # 示例：查看日志
-python -m cli_anything.netty_server --host 148.70.196.152 logs show CT902605150001
+python -m cli_anything.netty_server --host <server-ip> logs show CT902605150001
 ```
 
 ## 命令参考
@@ -59,5 +59,4 @@ python -m cli_anything.netty_server --host 148.70.196.152 logs show CT9026051500
 ## 默认服务器
 
 - 默认地址：`localhost:8235`
-- 公网服务器：`148.70.196.152:8235`
-- 通过 `--host` 参数指定：`python -m cli_anything.netty_server --host <ip> <command>`
+- 通过 `--host` 参数指定远程服务器：`python -m cli_anything.netty_server --host <服务器IP> <command>`

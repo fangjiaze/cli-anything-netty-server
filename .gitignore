@@ -1,0 +1,14 @@
+# 敏感配置
+*.local.conf
+*.secret
+config.override.*
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# IDE
+.vscode/
+.idea/
